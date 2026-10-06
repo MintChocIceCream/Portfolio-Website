@@ -129,45 +129,44 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
 }
 
 /* =========================================
-   PROJECTS PAGE (UNCHANGED)
+   PROJECTS PAGE
    ========================================= */
-.projects-list { display: flex; flex-direction: column; margin-top: 2rem; }
-.project-card + .project-card {
-  margin-top: 3rem;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Replaces margin hacks for consistent spacing */
+  margin-top: 2rem;
 }
+
 .project-card {
   background: var(--light-blue);
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  position: relative;
   border-left: 4px solid var(--primary-blue);
+  color: var(--text-dark); /* Inherits body color */
 }
-.project-card:nth-child(odd) { margin-right: 8%; }
-.project-card:nth-child(even) { margin-left: 8%; }
-.project-card h3 { color: var(--dark-blue); margin-bottom: 0.4rem; }
-.project-meta { font-size: 0.9rem; color: var(--text-dark); margin-bottom: 0.8rem; font-style: italic; }
-/* Force dark text inside project cards */
-.project-card {
-  color: #1a1a1a; /* Sets default text to dark gray/black */
-}
+
 .project-card h3 {
-  color: var(--dark-blue); /* Keeps project titles blue */
-}
-.project-card .project-meta {
-  color: #4a4a4a; /* Optional: keeps dates/roles slightly softer */
+  color: var(--dark-blue);
+  margin-bottom: 0.4rem;
 }
 
-.project-card .project-desc {
-  color: #1a1a1a !important; /* Keeps the description paragraph (last line) dark. */
+.project-meta {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin-bottom: 0.8rem;
+  font-style: italic;
 }
 
-/* =========================================
-   PROJECT CARDS WITH YOUTUBE THUMBNAILS
-   ========================================= */
-.project-card {
+.project-desc {
+  color: var(--text-dark);
+}
+
+/* Only apply grid layout when a thumbnail is present */
+.project-card--with-thumb {
   display: grid;
-  grid-template-columns: minmax(1, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   gap: 2rem;
   align-items: center;
 }
@@ -178,17 +177,15 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
   overflow: hidden;
   border-radius: 10px;
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .project-thumb {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   transition: transform 0.25s ease;
-}
-
-.project-thumb[data-youtube] {
-    aspect-ratio: 16 / 9;
 }
 
 .play-icon {
@@ -202,6 +199,7 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
   opacity: 0.85;
   pointer-events: none;
+  transition: opacity 0.2s;
 }
 
 .project-thumb-link:hover .project-thumb,
@@ -209,8 +207,7 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
   transform: scale(1.03);
 }
 
-.project-thumb-link:hover .play-icon,
-.project-thumb-link:focus-visible .play-icon {
+.project-thumb-link:hover .play-icon {
   opacity: 1;
 }
 
@@ -224,7 +221,7 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
 }
 
 @media (max-width: 768px) {
-  .project-card {
+  .project-card--with-thumb {
     grid-template-columns: 1fr;
   }
 
@@ -232,6 +229,26 @@ p { margin-bottom: 1rem; color: var(--text-gray); }
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  /* Remove staggered margins on mobile */
+  .project-card:nth-child(odd),
+  .project-card:nth-child(even) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .project-card {
+    margin-bottom: 2rem;
+  }
+  .project-card:last-child {
+    margin-bottom: 0;
   }
 }
 
