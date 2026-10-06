@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | My Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Hugo Lai</div>
+      <ul class="nav-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="./workExperience">Professional Experience</a></li>
+        <li><a href="./projects">Projects</a></li>
+        <li><a href="./contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <section>
+    <h2>Project Portfolio</h2>
+
+<!--RAG ChatGPT Project -->
+    <div class="project-card">
+      <a class="project-thumb-link"
+        href="https://jpsahel.github.io/InitialRepo/#/project"
+        target="_blank"
+        rel="noopener">
+      <img class="project-thumb" src="/images/RAG_Eval.jpg" alt="Project site picture">
+      </a>
+
+      <div class="project-body">
+        <h3>RAG Project</h3>
+        <p class="project-meta">Technologies Used: OpenAI API, Node.js, React, MongoDB</p>
+        <p class="project-desc">Unfortunately this is no longer functional as the API key has lost funding haha, however this was a full stack project.
+        <br>Using Node.js to create a local server, with Express.js help with the backend framework (Such as implementing RESTful APIs).
+        <br>React was used for the front end. 
+        <br><br>The RAG pipeline comes from having the ChatGPT API retrieve a dataset from our MongoDB database, interpret a set of questions, then put its answers back into MongoDB.
+        After which we model the data to compare how well the LLM model does in answer the questions, focusing on its accuracy. 
+        <br><br>Click on the image window to view the website...albeit without the data modeling function :(
+        </p>
+      </div>
+    </div>
+
+<!--LMStudios Local LLM Project-->
+    <div class="project-card">
+      <h3>Local LLM with LM Studios (Video Coming Soon!)</h3>
+      <p class="project-meta">Technologies Used: LM Studios, Qwen 3.6/3.8 models, Google Gemma, Tailscale </p>
+      <p class="project-desc">My favourite personal project! AI is a useful and innovative tool, but subscriptions can add up. I spent $535 on a subscription over the course of 8 months 
+        and decided it was time to take the plunge into running my own model, securing my data, and putting my hardware to another use. 
+        <br><br> Using LM Studio as my llama.cpp wrapper, it made for a quick and easy setup. I was able to get my other devices to connect to my local model running at home, even when I'm away from my local network!
+        <br><br>I started this project when LM Link was in very early beta, and connecting to my local network from outside was not as easy as connecting my accounts. Hence I had to configure a VPN to allow my devices from outside the network to connect to my home network without headaches from dealing with my ISP. 
+        <br><br>This project has taught me a lot, with AI and networking. Now all I have left to do is spend my live savings on more hardware...
+      </p>
+    </div>
+
+    
+<!--Microsoft AD and Hyper-V project-->    
+    <div class="project-card">
+        <a class="project-thumb-link"
+          href="https://www.youtube.com/watch?v=1P-onujBlNE"
+          target="_blank"
+          rel="noopener">
+          <img class="project-thumb"
+          src="https://i.ytimg.com/vi/1P-onujBlNE/maxresdefault.jpg"
+          alt="YouTube thumbnail for Project Title 1"
+          onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1P-onujBlNE/mqdefault.jpg';">
+          <span class="play-icon" aria-hidden="true">▶</span>
+        </a>
+
+      <div class="project-body">
+        <h3>Hands On Lab with Microsoft Active Directory, and Hyper-V</h3>
+        <p class="project-desc">A live demonstration of me figuring out Active Directory for the first time! Coupled with using Hyper-V, as opposed to virtualBox which I have previous experience with.
+        <br><br>Click on the image window to view the video!
+        </p>
+      </div>
+    </div>
+
+<!--Playlist of my technical guides and bug hunting/fixes--> 
+    <div class="project-card">
+      <a class="project-thumb-link"
+        href="https://youtube.com/playlist?list=PLMcMyLDd1DKo&si=LmV_-epWpIRfc-7H"
+        target="_blank"
+        rel="noopener">
+        <img class="project-thumb"
+        src="https://i.ytimg.com/vi/PzRKdad-7uY/maxresdefault.jpg"
+        alt="YouTube thumbnail for Project Title 1"
+        onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PzRKdad-7uY/mqdefault.jpg';">
+        <span class="play-icon" aria-hidden="true">▶</span>
+      </a>
+  
+      <div class="project-body">
+        <h3>Playlist to my bug fixes in games, and other tech guides!</h3>
+        <p class="project-desc">Here's my playlist of all of technical documentations (in the form of videos).
+        <br>It is a mixture of using and configuring professional tools, or hunting and fixing game bugs.
+        <br><br>Click on the imagine window to view the playlist! 
+        </p>
+      </div>
+    </div>
+
+<!--iFixit documentation-->
+
+    <div class="project-card">
+      <a class="project-thumb-link"
+        href="https://www.ifixit.com/Guide/Simagic+Alpha+Mini+Direct+Drive+Wheelbase+Magnet+Positional+Sensor+Replacement/170205"
+        target="_blank"
+        rel="noopener">
+       <img class="project-thumb" src="/images/iFixit.jpg" alt="iFixit project page">
+      </a>
+    
+      <div class="project-body">
+        <h3>iFixit Guide</h3>
+        <p class="project-desc">With my biggest interests being in cars, of course I have a racing simultaor. However my wheelbase unit has had troubles for the longest time, it is a constant battle with the electronics.</p>
+        Having fixed it many times, I decided maybe someone else would run into the same problem. With my hobbies all surrounding tech, I have made a habit to document all possible faults and problems I face. As well as creating a step-by-step documentation to fixing it. 
+        <br>Whether in text form or video form, I make sure that my problems are documented, no matter how niche it may seem. 
+        <br>You never know if one other person is facing the same issue and could use a hand. 
+        <br><br>Click on the image window to view my full guide on the iFixit website if you wish :)       
+      </div>
+
+  </div>
+  
+    </section>
+  </main>
+</body>
+</html>
